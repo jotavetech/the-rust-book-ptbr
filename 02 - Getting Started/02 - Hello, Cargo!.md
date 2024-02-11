@@ -1,3 +1,4 @@
+# Hello, Cargo!
 
 O Cargo é um sistema de build e gerenciador de pacotes do Rust, é muito usado porque o Cargo da conta de um monte de tarefas para você, como fazer a build do código, instalar bibliotecas e dependências do código, além de construir essas bibliotecas.
 

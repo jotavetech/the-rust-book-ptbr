@@ -1,3 +1,4 @@
+# Hello, World!
 
 Criando uma pasta para o nosso primeiro programa em rust:
 
