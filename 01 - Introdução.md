@@ -1,3 +1,5 @@
+# INTRODUÇÃO
+
 Rust ajuda você a escrever rapidamente um software mais confiável. Ele te da a opção de controlar detalhes de baixo nível como uso de memória sem os problemas tradicionalmente associados a esse controle. 
 
 O compilador do rust não permite você rodar códigos com bugs errôneos. Isso permite que os desenvolvedores gastem mais tempo na lógica do seu programa do que tentando corrigir bugs.
@@ -9,3 +11,5 @@ Também traz junto algumas ferramentas bem úteis para desenvolvedores, como:
 
 
 Uma importante parte no processo de aprender Rust é entender como ler as mensagens de erro do compilador, elas vão te guiar na direção de como trabalhar com o seu código. 
+
+[Aqui está o passo a passo oficial para a instalação do Rust](https://doc.rust-lang.org/book/ch01-01-installation.html)
