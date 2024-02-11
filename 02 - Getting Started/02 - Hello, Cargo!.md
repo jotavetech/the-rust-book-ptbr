@@ -11,7 +11,7 @@ $ cargo --version
 
 ### Criando um projeto com Cargo
 
-Vamos iniciar um novo projeto usando o Cargo, você vai ver a diferença dele com o nosso programa original "Hello, World!"
+Vamos iniciar um novo projeto usando o Cargo, você vai ver a diferença dele com o nosso programa original "Hello, World!".
 
 Primeiro vamos criar um novo projeto e acessar a sua pasta.
 

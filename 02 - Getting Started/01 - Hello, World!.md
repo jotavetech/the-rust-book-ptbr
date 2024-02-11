@@ -50,7 +50,7 @@ fn main() {
 
 Aqui criamos uma função nomeada ```main```, ela é uma função especial, é sempre a primeira parte do código que vai rodar em todo programa executável em Rust. Nela não vai nenhum parâmetro e também não retorna nada. Se precisássemos de parâmetros eles iriam dentro dos parênteses ( ).  
 
-O corpo de função esta envolto dos { } (Curly brackets). O rust precisa de curly brackets em volta de todos os corpos das funções.
+O corpo da função esta envolto dos { } (Curly brackets). O rust precisa de curly brackets em volta de todos os corpos das funções.
 
 O corpo da função `main` agora segura o seguinte código:
 
@@ -62,7 +62,7 @@ Essa é a linha que faz todo o trabalho nesse pequeno programa, ela imprime o te
 Temos alguns detalhes importantes para ver aqui:
 
 - O estilo de código do Rust é identado por 4 espaços, não uma tab.
-- ```println!``` chama um macro do Rust, se fosse chamado como uma função seria ```println```sem usar o ```!```. Vamos ver macros mais detalhadamente mais pra frente, por enquanto apenas precisamos saber que usar um ```!```significa que estou chamando um macro ao invés de uma função normal e que os macros não seguem sempre as mesmas regras das funções.
+- ```println!``` chama um macro do Rust, se fosse chamado como uma função seria ```println```sem usar o ```!```. Vamos ver macros detalhadamente mais pra frente, por enquanto apenas precisamos saber que usar um ```!``` significa que estou chamando um macro ao invés de uma função normal e que os macros não seguem sempre as mesmas regras das funções.
 - A string ```Hello, world!``` é passada como um argumento para o macro ```println!``` e ela imprime a string na tela.
 - Precisamos terminar a linha com ```;``` para indicar que a expressão acabou e estamos prontos para seguir com o código. 
 
