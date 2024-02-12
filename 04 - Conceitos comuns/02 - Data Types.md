@@ -14,6 +14,8 @@ let guess: u32 = "42".parse().expect("Not a number!");
 
 Representa um valor único, o Rust tem quatro tipos primários escaláveis: Integers, Floating numbers, Booleans, e Characters.
 
+Não vou me aprofundar por aqui, mas saiba que tipos signed são para números negativos e positivos, com sinal, e números unsigned funcionam apenas em números positivos. 
+
 #### Inteiros 
 |Length|Signed|Unsigned|
 |---|---|---|
