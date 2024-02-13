@@ -22,7 +22,7 @@ Vamos ver o escopo de algumas variáveis, o escopo é o lugar que a variável é
         let s = "hello";   // s é válida daqui em diante
 
         // faça algo com s
-    }                      // o escopo acabou, a vriável não é mais válida
+    }                      // o escopo acabou, a variável não é mais válida
 ```
 
 Associamos a variável ```s``` a uma string _literal_ e podemos ver dois importantes pontos:
