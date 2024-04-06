@@ -12,7 +12,7 @@ fn main() {
 }
 
 fn another_function() {
-    println!("Another function.");
+    println!("Outra função.");
 }
 ```
 
@@ -30,7 +30,7 @@ fn main() {
 }
 
 fn another_function(x: i32) {
-    println!("The value of x is: {x}");
+    println!("O valor de x é: {x}");
 }
 ```
 
@@ -69,7 +69,7 @@ fn main() {
         x + 1
     };
 
-    println!("The value of y is: {y}");
+    println!("O valor de y é: {y}");
 }
 ```
 
@@ -100,7 +100,7 @@ fn five() -> i32 {
 fn main() {
     let x = five();
 
-    println!("The value of x is: {x}"); // X é 5.
+    println!("O valor de x é: {x}"); // X é 5.
 }
 ```
 
@@ -112,7 +112,7 @@ Se tentarmos fazer uma função e no final na última linha que deveria ser reto
 fn main() {
     let x = plus_one(5);
 
-    println!("The value of x is: {x}");
+    println!("O valor de x é: {x}");
 }
 
 fn plus_one(x: i32) -> i32 {

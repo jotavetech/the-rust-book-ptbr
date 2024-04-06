@@ -7,9 +7,9 @@ Se você tentar rodar o código abaixo, terá um erro no terminal:
 ```rust
 fn main() { 
 	let x = 5; 
-	println!("The value of x is: {x}"); 
+	println!("O valor de x é: {x}"); 
 	x = 6; 
-	println!("The value of x is: {x}"); 
+	println!("O novo valor de x é: {x}");  // nao roda
 }
 ```
 
@@ -20,9 +20,9 @@ Mas mutabilidade pode ser bem útil, para criar uma variável mutável você pre
 ```rust
 fn main() {
     let mut x = 5;
-    println!("The value of x is: {x}");
+    println!("O valor de x é: {x}");
     x = 6;
-    println!("The value of x is: {x}");
+    println!("O novo valor de x é: {x}"); // funciona
 }
 ```
 
@@ -40,30 +40,31 @@ Assim como variáveis imutáveis, constantes são valores que são designados pa
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 ```
 
-Operações em constantes são feitas na hora de compilar o código e salvando os valores no seu binário, deixando assim o código mais rápido. 
+Operações em constantes são feitas na hora de compilar o código e tem os valores salvo nos binários, deixando assim o código mais rápido. 
 
-### Shadowing
+### Sombreamento
 
-Como vimos antes, podemos declarar mais de uma variável com o mesmo nome, popularmente é falado que a primeira variável é _sombreada_ pela segunda, isso quer dizer que a segunda variável é o que o compilador vai ver quando você usar o nome da variável. Em efeito, a segunda variável ofusca a primeira. Nós podemos sombrear uma variável usando o mesmo nome dela e repetindo o uso da keyword.
+Como vimos antes, podemos declarar mais de uma variável com o mesmo nome, popularmente é falado que a primeira variável é _sombreada_ pela segunda, isso quer dizer que a segunda variável é o que o compilador vai ver quando você usar o nome da variável. Em efeito, a segunda variável ofusca a primeira. Nós podemos sombrear uma variável usando o mesmo nome dela e repetindo o uso da palavra-chave.
 
 ```rust
 fn main() {
     let x = 5;
 
-    let x = x + 1;
+    let x = x + 1; // 6
 
     {
         let x = x * 2;
-        println!("The value of x in the inner scope is: {x}"); // 12
+        println!("O valor de x dentro do escopo é: {x}"); // 12
     }
 
-    println!("The value of x is: {x}"); // 6
+    println!("O valor de x fora do escopo é: {x}"); // 6
 }
 ```
 
 Sombrear (shadowing) é como alterar uma variável mas sem alterar, por exemplo no código acima, aonde depois de sair do outro escopo eu queria continuar com o valor que x teve no começo. 
 
 Também colocar tipos diferentes nas variáveis:
+
 ```rust
 let x = 10;
 let x = "X is a string";

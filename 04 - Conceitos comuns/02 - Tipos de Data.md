@@ -46,26 +46,26 @@ Rust também suporta operações básicas de matemática:
 ```rust
 fn main() {
     // Adição
-    let sum = 5 + 10;
+    let soma = 5 + 10;
 
     // Subtração
-    let difference = 95.5 - 4.3;
+    let diferenca = 95.5 - 4.3;
 
     // Multiplicação
-    let product = 4 * 30;
+    let produto = 4 * 30;
 
     // Divisão
-    let quotient = 56.7 / 32.2;
-    let truncated = -5 / 3; // Resulta -1
+    let cociente = 56.7 / 32.2;
+    let truncamento = -5 / 3; // Resulta -1
 
     // Restante
-    let remainder = 43 % 5;
+    let restante = 43 % 5;
 }
 ```
 
 ### Booleanos
 
-O Rust só aceita ```true``` e ```false``` para valores booleanos, e eles tem apenas um byte de tamanho:
+O Rust só aceita ```true``` e ```false``` para valores booleanos::
 
 ```rust
 fn main() {
@@ -75,7 +75,7 @@ fn main() {
 }
 ```
 
-### Character 
+### Caractere
 
 No Rust, ```char``` são com single quotes ('), ao contrário de strings que usam double quotes ("). Ele é um tipo com quatro bytes em tamanho e representa um Valor Escalável Unicode. Quer dizer que aceita mais do que apenas ASCII, como letras chinesas, japonesas, coreanas, emojis, etc..
 
@@ -86,8 +86,6 @@ fn main() {
     let heart_eyed_cat = '😻';
 }
 ```
-
-
 
 ## Tipos Compostos
 
@@ -113,7 +111,7 @@ fn main() {
 
     let (x, y, z) = tup;
 
-    println!("The value of y is: {y}");
+    println!("O valor de y é: {y}");
 }
 ```
 
@@ -150,8 +148,8 @@ Uma array não é flexível como um tipo _vetor_. Um _vetor_ é similar a uma co
 Arrays são mais úteis quando sabemos que o número de elementos não vai mudar, como por exemplo, os meses de um ano: 
 
 ```rust
-let months = ["January", "February", "March", "April", "May", "June", "July",
-              "August", "September", "October", "November", "December"];
+let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho",
+              "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 ```
 
 Podemos também criar um array especificando o tipo de elemento que ele vai conter e o seu tamanho:
@@ -170,8 +168,8 @@ Podemos usar o index para acessar elementos de um array, como:
 fn main() {
     let a = [1, 2, 3, 4, 5];
 
-    let first = a[0];
-    let second = a[1];
+    let primeiro = a[0];
+    let segundo = a[1];
 }
 ```
 

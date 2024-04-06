@@ -4,7 +4,7 @@ A maioria das estruturas em Rust que vão te permitir controlar o fluxo do seu p
 
 ### Expressões if
 
-Uma expressão ```if``` te permite fazer algo dependendo a condição que você passar pra ela, se estiver chovendo, não saia de casa, se não estiver chovendo vá passear.
+Uma expressão ```if``` te permite fazer algo dependendo a condição que você passar pra ela, se estiver chovendo, não saia de casa, se não estiver chovendo, vá passear.
 
 ```rust
 let is_raining = false;
@@ -46,7 +46,7 @@ fn main() {
     // se a condição for verdadeira retorna 5, se não, retorna 6.
     let number = if condition { 5 } else { 6 }; 
 
-    println!("The value of number is: {number}");
+    println!("O valor de number é: {number}");
 }
 ```
 
@@ -72,7 +72,7 @@ No exemplo abaixo, o código será executado infinitamente, até pararmos ele ma
 ```rust
 fn main() {
     loop {
-        println!("again!");
+        println!("de novo!");
     }
 }
 ```
@@ -91,7 +91,7 @@ fn main() {
         }
     };
 
-    println!("The result is {result}");
+    println!("O resultado é {result}");
 }
 ```
 
@@ -115,7 +115,7 @@ fn main() {
 }
 ```
 
-No loop ```while``` a cima passamos a condição, de que se ```number``` for diferente de zero o bloco de código será rodado, então para podermos parar o loop, toda vez que ela passa no bloco de código diminuímos o valor de ```number``` em -1 até chegar a 0 e parar o loop. Enquanto a condição for ```true``` o loop roda, quando deixar de ser ```true``` o loop para.
+No loop ```while``` a cima passamos a condição de que se ```number``` for diferente de zero o bloco de código será rodado, então para podermos parar o loop, toda vez que ela passa no bloco de código diminuímos o valor de ```number``` em -1 até chegar a 0 e parar o loop. Enquanto a condição for ```true``` o loop roda, quando deixar de ser ```true``` o loop para.
 
 Outra alternativa para executar loops e algum código em cada item de uma coleção, por exemplo, é o ```for``` loop.
 
@@ -124,7 +124,7 @@ fn main() {
     let a = [10, 20, 30, 40, 50];
 
     for element in a {
-        println!("the value is: {element}");
+        println!("O valor do elemento é: {element}");
     }
 }
 ```
