@@ -141,7 +141,7 @@ O tipo array, diferente da tupla, tem que ter todos os elementos do mesmo tipo, 
 fn main() {
     let a = [1, 2, 3, 4, 5];
 }
-}```
+```
 
 Uma array não é flexível como um tipo _vetor_. Um _vetor_ é similar a uma coleção de tipos, provida da biblioteca standard, que permite crescer e diminuir de tamanho, vamos discutir mais a frente.
 
