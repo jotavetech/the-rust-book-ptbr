@@ -15,7 +15,7 @@ O repositório é aberto então você pode enviar sugestões de alteração 😀
 3. [Jogo de adivinhação](https://github.com/jotavetech/the-rust-book/blob/main/03%20-%20Jogo%20de%20adivinha%C3%A7%C3%A3o/01%20-%20Jogo.md)
 4. [Conceitos Comuns](https://github.com/jotavetech/the-rust-book/tree/main/04%20-%20Conceitos%20comuns)
 	1. [Variáveis e Mutabilidade](https://github.com/jotavetech/the-rust-book/blob/main/04%20-%20Conceitos%20comuns/01%20-%20Vari%C3%A1veis%20e%20Mutabilidade.md)
-	2. [Tipos de Dados](https://github.com/jotavetech/the-rust-book/blob/main/04%20-%20Conceitos%20comuns/02%20-%20Data%20Types.md)
+	2. [Tipos de Data](https://github.com/jotavetech/the-rust-book-ptbr/blob/main/04%20-%20Conceitos%20comuns/02%20-%20Tipos%20de%20Data.md)
 	3. [Funções](https://github.com/jotavetech/the-rust-book/blob/main/04%20-%20Conceitos%20comuns/03%20-%20Fun%C3%A7%C3%B5es.md)
 	4. [Controle de Fluxo](https://github.com/jotavetech/the-rust-book/blob/main/04%20-%20Conceitos%20comuns/04%20-%20Controle%20de%20Fluxo.md)
 5. [Entendendo Ownership](https://github.com/jotavetech/the-rust-book/tree/main/05%20-%20Entendendo%20Ownership)
