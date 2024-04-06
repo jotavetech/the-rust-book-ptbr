@@ -44,7 +44,7 @@ use std::io;
 
 Por padrão, o Rust tem um set de itens definidos na biblioteca standard, que traz isso para o escopo de todo programa. Esse set é chamado de _prelude_.
 
-Se você quiser algo que não está no _prelude_, precisa trazer isso para o escopo usando a declaração ```use```. Usar a biblioteca ```std:io``` traz várias features úteis. Como a habilidade de aceitar entradas do usuário.
+Se você quiser algo que não está no _prelude_, precisa trazer isso para o escopo usando a declaração ```use```. Usar a biblioteca ```std:io``` traz várias funcionalidades úteis. Como a habilidade de aceitar entradas do usuário.
 
 Agora temos a função ``main`` que como vimos anteriormente, é a porta de entrada para todo programa em Rust.
 
@@ -52,7 +52,7 @@ Agora temos a função ``main`` que como vimos anteriormente, é a porta de entr
 fn main() {
 ```
 
-A sintaxe ```fn```declara uma nova função.
+A sintaxe ```fn``` declara uma nova função.
 
 Depois usamos o macro ```println!``` para imprimir na tela a string.
 
@@ -80,7 +80,7 @@ let mut bananas = 5 // mutavel
 
 Voltando ao nosso jogo de adivinhação, sabemos que ```let mut guess``` vai iniciar uma variável mutável chamada ```guess```. O símbolo de = diz ao Rust que queremos vincular algo a aquela variável, assim associamos aquela variável ao resultado de ```String::new```, uma função que retorna uma instancia de String, um tipo provido pela biblioteca standard.  Que é um pedaço de texto codificado em UTF-8 dinâmico, que pode crescer. 
 
-O ```::``` na linha ```::new``` indica que ```new```é uma função associada ao tipo String, uma função associada é uma função que é implementada em um tipo, nesse caso String. A função ```new``` cria uma nova string vazia.
+O ```::``` na linha ```::new``` indica que ```new```é uma função associada ao tipo String. Uma função associada é uma função que é implementada em um tipo, nesse caso String. A função ```new``` cria uma nova string vazia.
 
 
 #### Recebendo entrada do usuário
@@ -94,9 +94,9 @@ Agora vamos usar o módulo a função ```stdin```  do módulo ```io``` que impor
 
 Agora a linha ```.read_line(&mut guess)``` chama o método ```read_line``` que pega a entrada do usuário e coloca isso em uma string, depois passamos ```&mut guess``` como argumento para dizer onde vamos armazenar a entrada do usuário.
 
-O ```&``` indica que esse argumento é uma referencia, que nos da um jeito acessar um dado na memória sem precisar copiar copiar ele várias vezes. Também veremos mais a fundo depois.
+O ```&``` indica que esse argumento é uma referencia, que nos da um jeito acessar um dado na memória sem precisar copiar ele várias vezes. Também veremos mais a fundo depois.
 
-A função ```read_line``` também retorna um resultado, que é ```Ok``` ou ```Err``` e precisamos lidar com isso, esse resultado tem métodos definidos nele, como o método ```expect``` que é chamado caso a instancia do resultado seja um valor ```Err```, ele vai crashar o programa e mostrar a mensagem que você passou como argumento na tela, assim como fizemos no código
+A função ```read_line``` também retorna um resultado, que é ```Ok``` ou ```Err``` e precisamos lidar com isso, esse resultado tem métodos definidos nele, como o método ```expect``` que é chamado caso a instancia do resultado seja um valor inválido (```Err```), ele vai quebrar o programa e mostrar a mensagem que você passou como argumento na tela, assim como fizemos no código
 
 ```rust
 .expect("Failed to read line");
@@ -129,7 +129,7 @@ Pronto! Agora você já tem a primeira parte do programa pronto e entende como e
 
 Agora, para dar continuidade ao programa vamos ter que gerar o nosso número aleatório, para isso vamos usar uma _biblioteca crate_ (crate é o termo do Rust para um binário ou uma biblioteca), que contém o código que pode ser usado em outros programas. 
 
-Para adicionar vamos ao nosso arquivo _Cargo.toml_ e vamos escrever:
+Para adicionar, vamos ao nosso arquivo _Cargo.toml_ e vamos escrever:
 
 ```toml
 [dependencies] 
@@ -160,7 +160,7 @@ E na próxima vez que você rodar ```cargo build``` o Cargo vai atualizar o regi
 
 ## Gerando Número Aleatório
 
-Agora vamos usar a _crate rand_ para gerar um número aleatório:
+Agora vamos usar a crate _rand_ para gerar um número aleatório:
 
 ```rust
 use std::io;
