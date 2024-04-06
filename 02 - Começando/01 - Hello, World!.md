@@ -48,9 +48,9 @@ fn main() {
 }
 ```
 
-Aqui criamos uma função nomeada ```main```, ela é uma função especial, é sempre a primeira parte do código que vai rodar em todo programa executável em Rust. Nela não vai nenhum parâmetro e também não retorna nada. Se precisássemos de parâmetros eles iriam dentro dos parênteses ( ).  
+Aqui criamos uma função nomeada ```main```, ela é uma função especial, será sempre a primeira parte do código que vai rodar em todo programa executável em Rust. Nela não vai nenhum parâmetro e também não retorna nada. Se precisássemos de parâmetros eles iriam dentro dos parênteses ( ).  
 
-O corpo da função esta envolto dos { } (Curly brackets). O rust precisa de curly brackets em volta de todos os corpos das funções.
+O corpo da função esta envolto dos ```{}``` (Curly brackets). O rust precisa de curly brackets em volta de todos os corpos das funções.
 
 O corpo da função `main` agora segura o seguinte código:
 
@@ -82,4 +82,4 @@ Se o código for compilado com sucesso, sem erros, será gerado um executável b
 $ ./main  # ou .\main.exe no Windows.
 ```
 
-Rust é uma linguagem compilada a frente do tempo! Quer dizer que você consegue compilar o programa e dar o executável para qualquer pessoa e elas vão conseguir rodar o código mesmo sem ter o Rust instalado. Se você dar a alguém um .rb, .py ou um arquivo .js, elas vão precisar ter uma implementação de Ruby, Python ou Javascript instalada.  Mas nessas linguagens você só precisa de um comando para compilar e rodar o programa, tudo é uma troca do design da linguagem.
+Rust é uma linguagem compilada a frente do tempo! Quer dizer que você consegue compilar o programa e dar o executável para qualquer pessoa e elas vão conseguir rodar o código mesmo sem ter o Rust instalado. Se você dar a alguém um .rb, .py ou um arquivo .js, elas vão precisar ter uma implementação de Ruby, Python ou Javascript instalada. Mas nessas linguagens você só precisa de um comando para compilar e rodar o programa, tudo é uma troca do design da linguagem.

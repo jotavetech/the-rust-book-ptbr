@@ -71,14 +71,14 @@ Hello, world!
 
 Se tudo ocorrer corretamente você vai ter um ```Hello, world!``` impresso no seu terminal, rodar o comando ```cargo build``` pela primeira vez também vai gerar um arquivo Cargo.lock, esse arquivo acompanha as exatas versões das dependências do seu projeto. Você nunca vai precisar mudar isso manualmente, o Cargo cuidará disso.
 
-Nós também podemos usar ```cargo run```para compilar o código e rodar o executável final em apenas um comando:
+Nós também podemos usar ```cargo run``` para compilar o código e rodar o executável final em apenas um comando:
 
 ```console
 $ cargo run
 Hello, world!
 ```
 
-Usar ```cargo run``` é mais conveniente que ter que rodar ```cargo build``` e depois usar todo o caminho para o binário, então a maioria dos desenvolvedores usam ```cargo run```. Sempre que o nosso código mudar você vai poder ver uma mensagem na tela que diz que o ```cargo run```está compilando o código fonte.
+Usar ```cargo run``` é mais conveniente que ter que rodar ```cargo build``` e depois usar todo o caminho para o binário, então a maioria dos desenvolvedores usam ```cargo run```. Sempre que o nosso código mudar você vai poder ver uma mensagem na tela que diz que o ```cargo run``` está compilando o código fonte.
 
 Para apenas checar se seu código compila mas não gerar nenhum executável você pode usar ```cargo check```. Por que você usaria isso? Ele é muito mais rápido que ```cargo build```porque ele pula a parte de produzir um executável. Você pode usar o _check_ para verificar se está tudo certo durante o desenvolvimento e quando acabar você pode fazer a _build_. 
 
