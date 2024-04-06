@@ -1,6 +1,6 @@
 # Referências e Empréstimos
 
-Para passarmos uma variável para uma função, sem mover perder ela, podemos usar uma referência, uma referência é como um ponteiro com um endereço, assim podemos acessar os dados armazenados nesse endereço. Diferente de um ponteiro, a referência garante que estará sempre apontando para um valor valido de um tipo específico.
+Para passarmos uma variável para uma função, sem mover e perder ela, podemos usar uma referência, que funciona como um ponteiro com um endereço, assim podemos acessar os dados armazenados nesse endereço. Diferente de um ponteiro, a referência garante que estará sempre apontando para um valor valido de um tipo específico.
 
 Usando a referência a um objeto:
 
@@ -10,7 +10,7 @@ fn main() {
 
     let len = calculate_length(&s1);
 
-    println!("The length of '{}' is {}.", s1, len);
+    println!("O tamanho de '{}' é {}.", s1, len);
 }
 
 fn calculate_length(s: &String) -> usize {
@@ -33,7 +33,7 @@ fn calculate_length(s: &String) -> usize { // s é uma referência a uma String
   // droppado.
 ```
 
-Quando fazemos uma referência estamos fazendo um **empréstimo**, então a função que pega a referência não vira a nova dona dela, logo não tem como você pegar de volta, pois continua sendo seu. Se você, por exemplo, empresta sua caneta para uma pessoa, a pessoa vai usar a caneta para a função que ela precisa e depois vai voltar pra você, você não deixou de ser dono.
+Quando fazemos uma referência estamos fazendo um **empréstimo**, então a função que pega a referência não vira a nova dona dela, logo, não tem como você pegar de volta, pois continua sendo seu. Se você, por exemplo, empresta sua caneta para uma pessoa, a pessoa vai usar a caneta para a função que ela precisa e depois vai voltar pra você, você não deixou de ser dono.
 
 Em um empréstimo não podemos modificar algo que só temos a referência, vai gerar erro:
 
@@ -115,12 +115,12 @@ Mas o código assim funciona:
 ```rust
     let mut s = String::from("hello");
 
-    let r1 = &s; // no problem
-    let r2 = &s; // no problem
+    let r1 = &s; // sem problema
+    let r2 = &s; // sem problema
     println!("{} and {}", r1, r2);
-    // variables r1 and r2 will not be used after this point
+    // as variaveis r1 e r2 nao serao usadas depois
 
-    let r3 = &mut s; // no problem
+    let r3 = &mut s; // sem problema, agora
     println!("{}", r3);
 ```
 

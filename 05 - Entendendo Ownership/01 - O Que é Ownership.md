@@ -2,7 +2,7 @@
 
 É uma das mais únicas ferramentas do Rust que permite deixar a memória do seu programa mais segura sem precisar de um garbage collector, como em algumas outras linguagens, é muito importante entender como isso funciona.
 
-Ownership é um set de regras que comandam em como um programa Rust controla a memória, todos os programas tem seus métodos para controlar o modo de que usam a memória enquanto estão rodando, algumas linguagens tem o garbage collector, que procura por memória que não está mais sendo usada e libera, em outras linguagens o programador tem que alocar e liberar a memória manualmente. 
+Ownership é um set de regras que comandam em como um programa Rust controla a memória, todos os programas tem seus métodos para controlar o modo de como usam a memória enquanto estão rodando, algumas linguagens tem o garbage collector, que procura por memória que não está mais sendo usada e libera, em outras linguagens, o programador tem que alocar e liberar a memória manualmente. 
 
 Em Rust a memória é gerenciada por um sistema de propriedade junto com um conjunto de regras do compilador, se alguma das regras forem violadas o programa não vai compilar. 
 
@@ -10,7 +10,7 @@ Em Rust a memória é gerenciada por um sistema de propriedade junto com um conj
 
 - Cada valor no Rust tem um dono.
 - Eles só podem ter um dono por vez.
-- Quando o dono sair do escopo, o valor será droppado.
+- Quando o dono sair do escopo, o valor será droppado (liberado, e deixará de existir).
 
 
 ## Escopo de Variável
@@ -25,8 +25,8 @@ Vamos ver o escopo de algumas variáveis, o escopo é o lugar que a variável é
     }                      // o escopo acabou, a variável não é mais válida
 ```
 
-Associamos a variável ```s``` a uma string _literal_ e podemos ver dois importantes pontos:
-- Quando ```s``` está no escopo, é valido.
+Associamos a variável ```s``` a uma _string literal_ e podemos ver dois importantes pontos:
+- Quando ```s``` está no escopo, é valida.
 - Ela continua válida até sair do escopo. 
 
 
@@ -34,7 +34,7 @@ Associamos a variável ```s``` a uma string _literal_ e podemos ver dois importa
 
 O tipo de string usado anteriormente é guardado na memória stack pois o compilador sabe o seu tamanho, o que precisamos agora é de um tipo mais complexo e dinâmico, que pode mudar e que seja armazenado na _heap_. 
 
-O tipo ```String``` nos permite criar strings que não sabemos o valor no compile time.
+O tipo ```String``` nos permite criar strings que não sabemos o valor na hora da compilação.
 
 ```rust
 let s = String::from("hello");
@@ -54,16 +54,16 @@ Por que o tipo ```String``` pode ser mutável e o tipo _literal_ não? A diferen
 
 ## Memória e Alocação
 
-No caso de uma string _literal_ nós sabemos o conteúdo na hora de compilar, então o texto vai direto para o executável final, mas só funciona para strings que sabemos o quanto vamos usar, e não para strings dinâmicas, pois não sabemos quando espaço precisamos armazenar na hora de compilar, e o tamanho também pode mudar enquanto o programa está rodando.
+No caso de uma _string literal_ nós sabemos o conteúdo na hora de compilar, então o texto vai direto para o executável final, mas só funciona para strings que sabemos o quanto vamos usar, e não para strings dinâmicas, pois não sabemos quando espaço precisamos armazenar na hora de compilar, e o tamanho também pode mudar enquanto o programa está rodando.
 
 Com o tipo ```String``` criamos uma variável mutável, que pode crescer e diminuir, e para isso alocamos um monte de memória heap:
 
 - A memória precisa ser requisitada no alocador de memória durante o tempo de execução.
 - Precisamos de um modo de retornar essa memória para o alocador quando terminamos de usar a ```String``` 
 
-Quando usamos ```String::from``` pedimos a memória que precisamos.
+Quando usamos ```String::from``` pedimos a memória que precisamos para uma nova String.
 
-No rust a memória é automaticamente retornada, uma vez que a memória que a possui sai do escopo. 
+No Rust a memória é automaticamente retornada (deixa de existir), uma vez que a variável que a possui sai do escopo. 
 
 ```rust
     {
@@ -73,7 +73,7 @@ No rust a memória é automaticamente retornada, uma vez que a memória que a po
     }                                  // o escopo acabou e s não é mais válido
 ```
 
-Quando uma variável sai do seu escopo o Rust chama uma especial função para nós, chamada ```drop```, ele chama essa função automaticamente no final das chaves {}.
+Quando uma variável sai do seu escopo, o Rust chama uma função especial para nós, chamada ```drop```, ele chama essa função automaticamente no final das chaves ```{}```.
 
 ### Variáveis e Interação de Data com Move.
 
@@ -84,7 +84,7 @@ Múltiplas variáveis podem interagir com o mesmo dado de formar diferentes:
     let y = x;
 ```
 
-Nós podemos chutar que provavelmente estamos associando o valor 5 para a variável ```x``` e depois fazendo uma cópia do valor de x e associando em y, agora temos duas variáveis iguais a 5. E é isso que está acontecendo, pois os números inteiros são valores fixos e conhecidos, esse dois valores 5 são colocados na _stack_.
+Nós podemos chutar que provavelmente estamos associando o valor 5 para a variável ```x``` e depois fazendo uma cópia do valor de x e associando em y, agora temos duas variáveis iguais a 5. E é isso que está acontecendo, pois os números inteiros são valores fixos e conhecidos na hora da compilação, esses dois valores 5 são colocados na _stack_.
 
 Vamos ver agora a versão em ```String```:
 
@@ -108,7 +108,7 @@ Para manter a segurança da sua memória, depois que você associa a variável `
     println!("{}, world!", s1);
 ```
 
-O código acima retornará um erro, porque ```s1``` foi movido e agora ```s2``` é dono daqueles dados!
+O código acima retornará um erro, porque ```s1``` foi movido e agora apenas ```s2``` é dona daqueles dados.
 
 Em escopos:
 
